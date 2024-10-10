@@ -5,15 +5,15 @@ import logo from '../image/Logo 2.png';
 const Navbar = () => {
   return (
     <nav>
-        <div class="logo">
-            <img src={logo} alt="" />
-        </div>
+      <div className="logo">
+        <img src={logo} alt="Logo" />
+      </div>
       <ul>
         <li><Link to="/">Beranda</Link></li>
         <li><Link to="/shop">HasilTani</Link></li>
         <li><Link to="/vacant">Lahan</Link></li>
         <li><Link to="/explore">Wisata</Link></li>
-        <li><Link to="/project">ProyekPertatnian</Link></li>
+        <li><Link to="/project">ProyekPertanian</Link></li>
         <li><Link to="/forum">Diskusi</Link></li>
       </ul>
     </nav>
