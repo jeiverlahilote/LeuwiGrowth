@@ -6,33 +6,19 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Theme Colors */
-:root {
-  --primary-green: #FFFFFF;
-  --secondary-green: #ECF3F2;
-  --light-green: #C3DBD7;
-  --dark-green: #377E72;
-}
-
 /* Body */
 body {
-  background-color: #ffffff;
-  color: #000000;
-  line-height: 3.5;
+  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(212, 255, 195));
 }
 
 /* Navbar Styles */
 nav {
-  background-color: #ffffff;
-  padding: 1rem;
+  padding: 5px;
   display: flex;
-  justify-content: space-between; /* Memisahkan logo di kiri dan links di kanan */
+  justify-content: space-between;
   align-items: center;
-}
-
-nav .logo h1 {
-  font-size: 1.5rem;
-  color: #000;
 }
 
 nav ul {
@@ -41,7 +27,9 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 1.5rem;
+  margin-bottom: 10px;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 nav ul li a {
@@ -51,19 +39,43 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #377E72; /* Warna hover sesuai palet */
+  color: #555;
 }
 
 /* Footer Styles */
 footer {
-  background-color: #c0c0c0;
-  padding: 3rem;
+  background-color: #1f1f1f;
+  padding: 6rem;
   text-align: center;
   margin-top: 2rem;
 }
 
+footer p {
+  color: white;
+}
+
+/* Home Page Styling */
+.home-container {
+  padding: 0 2rem;
+}
+
+/* Hero Section Styling */
+.hero-section-home {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 3rem;
+}
+
+.hero-text-home h1 {
+  font-size: 3rem;
+  color: #000;
+  line-height: 1.2;
+  max-width: 50%;
+}
+
 /* Hero Section */
-.hero {
+.hero-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,15 +84,45 @@ footer {
   text-align: center;
 }
 
-.hero h1 {
+.hero-home h1 {
   font-size: 3rem;
   color: var(--dark-green);
 }
 
+
+.hero-image-home {
+  flex: 1; /* Mengizinkan gambar mengambil ruang yang tersisa */
+  margin-left: 20px; /* Menambahkan margin kiri agar tidak terlalu rapat */
+  box-shadow: 0 4px 10px rgba(55, 126, 114, 0.5); /* Bayangan hijau */
+  border-radius: 8px; /* Menambahkan sudut melengkung */
+  overflow: hidden; /* Mencegah gambar meluap dari kontainer */
+}
+
+.hero-image-home img {
+  width: 100%; /* Memastikan gambar mengisi lebar kontainer */
+  height: 900%; /* Memastikan gambar mengisi tinggi kontainer */
+  object-fit: cover; /* Mengisi kontainer tanpa mengubah rasio aspek */
+  border-radius: 8px; /* Menambahkan sudut melengkung pada gambar */
+}
+
+.hero-image {
+  flex: 1;
+  margin-left: 20px;
+  box-shadow: 0 4px 10px rgba(55, 126, 114, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 /* Section Styles */
 section {
-  padding: 15rem;
-  background-color: var(--background-color);
+  padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 8px;
 }
@@ -132,14 +174,6 @@ button:hover {
   color: var(--dark-green);
 }
 
-/* Global Styling */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
 /* Home Page Styling */
 .home-container {
   padding: 0 2rem;
@@ -148,33 +182,36 @@ body {
 /* Hero Section Styling */
 .hero-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 3rem;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  color: #000;
-  line-height: 1.2;
-  max-width: 50%;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px; /* Atur sesuai ukuran yang diinginkan */
+  height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(55, 126, 114, 0.5);
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #000;
+  text-align: center;
+  margin-top: 1rem; /* Menambahkan jarak antara gambar dan teks */
 }
 
 /* Product Section Styling */
 .product-section {
+  padding: 1rem;
   text-align: center;
   margin-bottom: 3rem;
 }
 
 .product-section h2 {
   font-size: 2rem;
-  color: #333;
+  color: #e9e9e9;
 }
 
 .product-section p {
@@ -185,27 +222,39 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .product-item {
+  flex: 1;
+  margin-left: 20px;
+  box-shadow: 0 4px 10px rgba(55, 126, 114, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
   height: 200px;
-  background-color: #ccc;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.product-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
 }
 
 /* Top Selling Section Styling */
 .top-selling-section {
+  color: black;
   text-align: center;
-  background-color: #e0e0e0;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
 }
 
 .top-selling-section h2 {
   font-size: 2rem;
-  color: #333;
+  color: #000000;
 }
 
 .top-selling-grid {
@@ -216,21 +265,98 @@ body {
 }
 
 .top-selling-item {
-  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(55, 126, 114, 0.5);
   border-radius: 8px;
-  padding: 1rem;
+  overflow: hidden;
+  background-color: #2baa40;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(7, 250, 19, 0.1);
 }
 
 .top-selling-item h3 {
   font-size: 1.2rem;
-  color: #000;
+  color: #ffffff;
 }
 
 .top-selling-item p {
   font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.top-selling-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Package Section Styling */
+.package-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.package-section h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.package-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.package-item {
+  flex: 1;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 300px; /* Sesuaikan ukuran */
+  box-shadow: 0 4px 10px rgba(55, 126, 114, 0.5);
+  text-align: left; /* Agar teks di dalamnya rata kiri */
+}
+
+.package-item h3 {
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.package-item ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.package-item ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
   color: #555;
+}
+
+.package-item .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.package-item button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.package-item button:hover {
+  background-color: #45a049;
 }
 
 /* Global Button Styling */
@@ -267,4 +393,645 @@ button:hover {
   .top-selling-grid {
     grid-template-columns: 1fr;
   }
+
+  .package-grid {
+    flex-direction: column;
+  }
+}
+
+/* Scoped CSS for Agriculture Shop Component */
+
+.agriculture-shop {
+  padding: 2rem;
+
+.agriculture-shop {
+  padding: 2rem;
+}
+
+.agriculture-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.agriculture-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.product-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.product-image img {
+  max-width: 1000%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.product-info {
+  max-width: 400px;
+  margin-left: 15rem; /* Mengurangi jarak antara gambar dan title */
+}
+
+
+.product-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #27ae60;
+}
+
+.product-info p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.product-info button {
+  background-color: #27ae60;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.product-info button:hover {
+  background-color: #219150;
+}
+
+/* Product Description */
+.product-description {
+  text-align: left;
+  margin: 3rem 0;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Author Section */
+.author-section {
+  margin: 3rem 0;
+  text-align: center; /* Menempatkan profil penulis di tengah */
+}
+
+.author-section h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Menyelaraskan konten di tengah */
+  margin-top: 1rem;
+}
+
+.author-profile {
+  text-align: center;
+  margin: 0 1rem; /* Menambahkan margin pada profil */
+}
+
+.author-profile img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.author-profile h4 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #2c3e50;
+}
+
+.author-profile p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.author-profile button {
+  background-color: #27ae60;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.author-profile button:hover {
+  background-color: #219150;
+  cursor: pointer;
+}
+
+/* Similar Products */
+.similar-products {
+  padding: 25px;
+  margin: 2rem 0;
+}
+
+.similar-products h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.product-grid {
+  padding: 100px;
+  justify-content: center;
+  display: flex;
+  gap: 2rem;
+}
+
+.product-item {
+  flex: 1;
+  max-width: 550px;
+  border-radius: 8px;
+  height: 350px;
+  overflow: hidden;
+  box-shadow: #ffffff;
+}
+
+.product-item img:hover{
+  background-color: #000;
+}
+
+.product-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+}
+.farmers-project-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .main-content {
+    margin-bottom: 40px;
+  }
+  
+  .project-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .participants {
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .image-grid img {
+    width: 48%;
+    border-radius: 5px;
+  }
+  
+  .upload-date {
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .project-description {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .info-button {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .location-section {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .map-image {
+    width: 50%; /* Centered and smaller map size */
+    margin: 20px auto;
+    display: block;
+    border-radius: 30px;
+    box-shadow: #000000;
+  }
+  
+  .google-maps-button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Comments section */
+  .comments-section {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .comment-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #e3ffde;
+    max-width: 500px; /* Make the box the same size as the UI you provided */
+    margin: 0 auto;
+  }
+  
+  .comment {
+    margin-bottom: 10px;
+  }
+  
+  .comment p {
+    margin: 5px 0;
+  }
+  
+  /* Profile section */
+  .profile-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info {
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .profile-button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Related jobs */
+  .related-jobs {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .job-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .job-grid img {
+    box-shadow: white;
+    width: 32%;
+    border-radius: 35px;
+  }
+
+  .job-grid img:hover{
+    box-shadow: black;
+    cursor: pointer;
+  }
+  
+/* Main Container */
+.discussion-forum {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Content */
+.main-content {
+  flex: 3;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background-color: #e6f4f1;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.header-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.header-options {
+  display: flex;
+  gap: 10px;
+}
+
+.header-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header-button:hover {
+  background-color: #ddd;
+}
+
+/* Post */
+.post {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.post-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-info h4 {
+  margin: 0;
+}
+
+.post-info p {
+  margin: 0;
+  color: #888;
+}
+
+.post-text {
+  margin: 10px 0;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.post-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #888;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.post-actions button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-actions button:hover {
+  background-color: #ddd;
+}
+
+.post-comment-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.recommendations {
+  background-color: #e6f4f1;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.recommendations h3 {
+  margin-bottom: 10px;
+}
+
+.recommendations ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recommendations ul li {
+  margin-bottom: 10px;
+}
+.vacant-field-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.main-content {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.field-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.participants {
+  font-size: 14px;
+  color: gray;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.single-field-image {
+  width: 80%; /* Menggunakan satu gambar lahan, ukurannya 80% dari lebar layar */
+  border-radius: 5px;
+}
+
+.upload-date {
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.field-description {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.field-price {
+  color: green;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.info-button {
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.location-section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.map-image {
+  width: 50%; /* Ukuran peta lebih kecil dan terpusat */
+  margin: 20px auto;
+  display: block;
+}
+
+.google-maps-button {
+  background-color: #00aaff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Comments section */
+.comments-section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.comment-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+/* Profile section */
+.profile-section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  max-width: 400px;
+  text-align: center;
+}
+
+.profile-button {
+  background-color: #00aaff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Related jobs */
+.related-products {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.job-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.job-grid img {
+  width: 32%;
+  border-radius: 5px;
 }
