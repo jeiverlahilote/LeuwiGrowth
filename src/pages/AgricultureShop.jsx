@@ -24,7 +24,7 @@ const AgricultureShop = () => {
           <p>⭐⭐⭐⭐4.5 (241 Ulasan)</p>
           <p>10rb+ Produk Terjual</p>
           <p>Rp. 7.600 per 100 gr</p>
-          <button>PESAN SEKARANG!</button>
+          <button className='main'>PESAN SEKARANG!</button>
         </div>
       </div>
 

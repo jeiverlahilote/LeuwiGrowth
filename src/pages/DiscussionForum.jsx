@@ -13,8 +13,8 @@ const DiscussionForum = () => {
           <input type="text" placeholder="Apa yang ingin anda tanyakan atau bagikan?" className="header-input" />
           <div className="header-options">
             <button className="header-button">Media</button>
-            <button className="header-button">Kegiatan</button>
-            <button className="header-button">Teks</button>
+            <button className="header-button ">Kegiatan</button>
+            <button className="header-button ">Teks</button>
           </div>
         </div>
 

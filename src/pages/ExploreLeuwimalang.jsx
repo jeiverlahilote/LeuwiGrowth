@@ -40,7 +40,7 @@ const ExploreLeuwimalang = () => {
               <li>Include makan 3x</li>
             </ul>
             <p className="price">Rp. 170.000</p>
-            <button>PESAN SEKARANG!</button>
+            <button className='main'>PESAN SEKARANG!</button>
           </div>
           <div className="package-item">
             <h3>Paket Liburan Wisata Kebun Lahilote Premium</h3>
@@ -51,7 +51,7 @@ const ExploreLeuwimalang = () => {
               <li>Digendong sampai tujuan</li>
             </ul>
             <p className="price">Rp. 1.700.000</p>
-            <button>PESAN SEKARANG!</button>
+            <button className='main'>PESAN SEKARANG!</button>
           </div>
         </div>
       </section>
