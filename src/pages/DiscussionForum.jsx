@@ -58,7 +58,7 @@ const DiscussionForum = () => {
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s...
           </p>
-          <img src={postImage} alt="Post Image" className="post-image" />
+          <img src='https://images.pexels.com/photos/28120193/pexels-photo-28120193/free-photo-of-buah-raspberry-emas-di-kala-matahari-terbit.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt="Post Image" className="post-image" />
           <div className="post-stats">
             <p>1234 likes</p>
             <p>30 Comments</p>

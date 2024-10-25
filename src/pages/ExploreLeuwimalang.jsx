@@ -1,76 +1,79 @@
-import React from 'react';
-import homepage from '../image/homepage.jpg';
-import destinasi1 from '../image/destinasi1.jpg';
-import destinasi2 from '../image/destinasi2(1).jpg';
-import destinasi3 from '../image/destinasi3(1).jpg';
+import React, { useState } from 'react';
+import PricingSection from '../components/pricingSection';
+
 
 const ExploreLeuwimalang = () => {
+  const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => setQuantity(quantity + 1);
+  const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
+
   return (
-    <div className="explore-container">
-      {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-image">
-          <img src={homepage} alt="Leuwi Malang" />
+    <div className="explore-leuwimalang-container">
+      {/* Bagian gambar dan detail */}
+      <div className="image-and-details">
+        <div className="main-image">
+          <img src="https://images.pexels.com/photos/50588/kuang-si-falls-waterfall-water-laos-50588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Curug Cilember" />
         </div>
-        <div className="hero-text">
-          <h1>Wisata Kebun Teh Si Teteh</h1>
-          <p>Wisata Kebun Teh ⭐ ⭐ ⭐ ⭐  (241 ulasan)</p>
+        <div className="thumbnail-images">
+          <img src="https://images.pexels.com/photos/14900951/pexels-photo-14900951.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Thumbnail 1" />
+          <img src="https://images.pexels.com/photos/5820001/pexels-photo-5820001.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Thumbnail 2" />
+          <img src="https://images.pexels.com/photos/17888975/pexels-photo-17888975/free-photo-of-batu-hutan-pohon-aliran.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Thumbnail 3" />
+          <div className="thumbnail-more">
+            <span>+4 Lainnya</span>
+          </div>
         </div>
-      </section>
+      </div>
 
-      {/* Review Section */}
-      <section className="review-section">
-        <h2>Wisata Kebun Lahilote</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+      {/* Bagian informasi produk */}
+      <div className="product-info">
+        <h2>Curug Cilember</h2>
+        <p>10rb+ telah konsultasi</p>
+        <p className="price">Rp 50.000</p>
+
+        <p className="description">
+          Curug Cilember adalah salah satu destinasi wisata alam yang terkenal di kawasan Puncak, Bogor. Curug ini terkenal dengan keindahan alamnya, terdiri dari tujuh tingkat air terjun yang mempesona, masing-masing dengan karakteristik dan ketinggian yang berbeda.
         </p>
-      </section>
 
-      {/* Package Section */}
-      <section className="package-section">
-        <h2>Paket Wisata Liburan</h2>
-        <div className="package-grid">
-          <div className="package-item">
-            <h3>Paket Liburan Wisata Kebun Lahilote Reguler</h3>
-            <ul>
-              <li>Tour Guide Professional</li>
-              <li>Transportasi (Titik Kumpul Jakarta)</li>
-              <li>Penginapan Homestay</li>
-              <li>Include makan 3x</li>
-            </ul>
-            <p className="price">Rp. 170.000</p>
-            <button className='main'>PESAN SEKARANG!</button>
+        <div className="action-container">
+          <div className="quantity-container">
+            <button onClick={decreaseQuantity}>-</button>
+            <span>{quantity}</span>
+            <button onClick={increaseQuantity}>+</button>
           </div>
-          <div className="package-item">
-            <h3>Paket Liburan Wisata Kebun Lahilote Premium</h3>
-            <ul>
-              <li>Tour Guide Professional</li>
-              <li>Penginapan Homestay</li>
-              <li>Include makan 3x</li>
-              <li>Digendong sampai tujuan</li>
-            </ul>
-            <p className="price">Rp. 1.700.000</p>
-            <button className='main'>PESAN SEKARANG!</button>
+          <div className="button-group">
+            <button className="reserve-button">Reservasi Sekarang</button>
+            <button className="favorite-button">❤️</button>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Other Products Section */}
-      <section className="other-products">
-        <h2>Temukan wisata menarik lainnya!</h2>
-        <div className="product-grid">
-          <div className="product-item">
-            <img src={destinasi1}alt="Wisata 1" />
-          </div>
-          <div className="product-item">
-            <img src={destinasi2} alt="Wisata 2" />
-          </div>
-          <div className="product-item">
-            <img src={destinasi3} alt="Wisata 3" />
-          </div>
-        </div>
-      </section>
+      {/* Bagian detail */}
+      <div className="detail-section">
+        <h3>Detail</h3>
+        <p><strong>Lokasi:</strong> Desa Leuwimalang, Kecamatan Cisarua, Kabupaten Bogor, Jawa Barat</p>
+        <p><strong>Jam Operasional:</strong> Check-in 14:00 WIB, Check-out 12:00 WIB</p>
+        <p><strong>Fasilitas:</strong></p>
+        <ul>
+          <li>Area parkir luas</li>
+          <li>Jalur trekking dengan penunjuk arah</li>
+          <li>Gazebo dan tempat istirahat</li>
+          <li>Area camping</li>
+          <li>Warung makan lokal</li>
+          <li>Tempat penyewaan alat renang dan safety gear</li>
+        </ul>
+      </div>
+
+      {/* Bagian lihat lokasi */}
+      <div className="location-section">
+        <h3>Lihat Lokasi:</h3>
+        <img src="https://thumb.viva.id/vivagadget/1265x711/2023/12/21/658444e4e937f-google-maps_.jpg" alt="Lokasi" />
+      </div>
+
+      {/* Bagian bundling */}
+      <div className="pricing-section-wrapper">
+  <PricingSection />
+</div>
     </div>
   );
 };
